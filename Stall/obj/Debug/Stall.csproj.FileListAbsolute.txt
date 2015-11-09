@@ -1,0 +1,6 @@
+C:\Users\James\Code\stall\Stall\bin\Debug\stall.exe.config
+C:\Users\James\Code\stall\Stall\bin\Debug\stall.exe
+C:\Users\James\Code\stall\Stall\bin\Debug\stall.pdb
+C:\Users\James\Code\stall\Stall\obj\Debug\Stall.csprojResolveAssemblyReference.cache
+C:\Users\James\Code\stall\Stall\obj\Debug\stall.exe
+C:\Users\James\Code\stall\Stall\obj\Debug\stall.pdb
