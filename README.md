@@ -57,7 +57,7 @@ should install ILSpy.
 If you want to make it show up nicely in Control Panel, you could alternatively run
 
 ```bash
-stall . -e ILSpy.exe -i ILSpy.exe --project-url=ilspy.net -p IC#Code --releases-url=github.com/icsharpcode/ILSpy/releases -v 2.3.1.1855
+stall . -e ILSpy.exe -i ILSpy.exe --project-url=ilspy.net -p IC#Code --releases-url=github.com/icsharpcode/ILSpy/releases -v 2.3.1
 ```
 
 ## Removing Apps
