@@ -41,7 +41,19 @@ The format of commands should be: `stall -e program [-i icon] [options] folder`
 
 By default, the paths of `program` and `icon` are relative to the root folder. If you wish to override this behavior, prepend `:` to your path to make it relative to the current directory (or absolute).
 
-Type `stall --help` for more help.
+Type `stall --help` for more usage.
+
+## Removing Apps
+
+Have an app, or apps, installed that you'd like to remove? Running
+
+```bash
+stall -un names,of,the,apps
+```
+
+will uninstall them.
+
+Unfortunately, the names of the apps need to be the ones listed in the Control Panel, so this is less intuitive than it sounds.
 
 ## FAQ
 
