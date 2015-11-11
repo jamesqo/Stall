@@ -11,21 +11,22 @@ namespace Stall.Helpers
     {
         public static bool AddToPath(this DirectoryInfo directory)
         {
-            string path = Environment.GetEnvironmentVariable("PATH", EnvironmentVariableTarget.Machine);
-            path = path.TrimEnd(';');
+            // TODO: This runs even if the dir is already in the machine-wide $PATH.
+            string path = Environment.GetEnvironmentVariable("PATH", EnvironmentVariableTarget.User);
 
             // Check if already present
-            string[] paths = path.Split(';');
-            for (int i = 0; i < paths.Length; i++)
+            foreach (string sub in path.Split(';'))
             {
-                string sub = paths[i];
-                sub = Environment.ExpandEnvironmentVariables(sub);
                 if (Equal.Paths(sub, directory.FullName))
                     return false;
             }
 
             // Add it
-            path += $";{directory.FullName}";
+            string addend = directory.FullName;
+            if (!path.EndsWith(";"))
+                addend = ';' + addend;
+            path += addend;
+            Environment.SetEnvironmentVariable("PATH", path, EnvironmentVariableTarget.User);
             return true;
         }
 

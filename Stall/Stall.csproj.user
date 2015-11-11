@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>-e ILSpy.exe --icon=ILSpy.exe -n ILSpy C:/Users/James/Downloads/code/ILSpy -p IC#Code --version 2.3.1.1855 --overwrite --project-url ilspy.net --releases-url github.com/icsharpcode/ILSpy/releases</StartArguments>
+    <StartArguments>-e stall.exe -s --overwrite Stall</StartArguments>
   </PropertyGroup>
   <PropertyGroup>
     <PublishUrlHistory>publish\</PublishUrlHistory>
