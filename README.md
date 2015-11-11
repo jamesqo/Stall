@@ -43,6 +43,23 @@ By default, the paths of `program` and `icon` are relative to the root folder. I
 
 Type `stall --help` for more usage.
 
+## Example: [ILSpy](http://ilspy.net)
+
+ILSpy doesn't come with an installer, which was in fact the original motivation for Stall. Download and unzip the binaries; running
+
+```bash
+cd ~/Downloads/ILSpy
+stall . -e ILSpy.exe -i ILSpy.exe
+```
+
+should install ILSpy.
+
+If you want to make it show up nicely in Control Panel, you could alternatively run
+
+```bash
+stall . -e ILSpy.exe -i ILSpy.exe --project-url=ilspy.net -p IC#Code --releases-url=github.com/icsharpcode/ILSpy/releases -v 2.3.1.1855
+```
+
 ## Removing Apps
 
 Have an app, or apps, installed that you'd like to remove? Running
@@ -57,6 +74,16 @@ Unfortunately, the names of the apps need to be the ones listed in the Control P
 
 ## FAQ
 
+### What's the difference between Stall and [Squirrel](https://github.com/Squirrel/Squirrel.Windows)?
+
+In short, Squirrel is meant to be a framework for self-updating apps. Stall can install apps without having to modify the code of the app itself, but doesn't manage app updates.
+
 ### I followed the steps [here](#getting-started), but Stall isn't in my `PATH`.
 
 Open a new command prompt and try again.
+
+### What if my app icon is embedded in the .exe file?
+
+```bash
+stall -e YourApp.exe -i YourApp.exe path/to/YourApp
+```
