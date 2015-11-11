@@ -1,4 +1,4 @@
-# Stall
+# Stall: A Windows App Installer
 
 [![Build Status](https://travis-ci.org/jamesqo/Stall.svg?branch=master)](https://travis-ci.org/jamesqo/Stall)
 
