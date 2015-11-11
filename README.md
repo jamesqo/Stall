@@ -1,5 +1,7 @@
 # Stall
 
+[![Build Status](https://travis-ci.org/jamesqo/Stall.svg?branch=master)](https://travis-ci.org/jamesqo/Stall)
+
 Ever downloaded an EXE, but couldn't install it? **Stall** is a command-line tool that can automatically install, or remove, your favorite Windows desktop apps.
 
 ## Usage
