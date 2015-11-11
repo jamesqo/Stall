@@ -1,2 +1,4 @@
 language: csharp
 solution: Stall.sln
+mono:
+  - nightly
