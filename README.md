@@ -4,7 +4,7 @@
 
 [![Travis CI](https://travis-ci.org/jamesqo/Stall.svg?branch=master)](https://travis-ci.org/jamesqo/Stall) [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/jamesqo/Stall?branch=master&svg=true)](https://ci.appveyor.com/project/jamesqo/Stall) [![BSD 2-Clause License](https://img.shields.io/badge/license-bsd%202.0-blue.svg?style=flat)](bsd.license)
 
-Ever downloaded a program that didn't come with an installer? **Stall** is a command-line tool that can automatically install, or remove, your favorite Windows desktop apps.
+Ever downloaded a program that didn't come with an installer? **Stall** is a command-line tool that can automagically install, or remove, your favorite Windows desktop apps.
 
 ## Getting Started
 
@@ -43,20 +43,22 @@ Type `stall --help` for more usage.
 
 ## Example
 
-**ILSpy** is one program that doesn't come with an installer (which in fact was the initial motivation for Stall). After you download and unzip the binaries from [their site](http://ilspy.net), running
+Let's try installing an app in real life! As an example, **ILSpy** is one program that doesn't come with an installer. To install, download and unzip the binaries from [their site](http://ilspy.net), and run
 
 ```bash
 cd ~/Downloads/ILSpy
 stall . -e ILSpy.exe -i ILSpy.exe
 ```
 
-should install ILSpy.
-
-If you want to make it show up nicely in Control Panel, you could alternatively run
+If you want it to show up nicely in Control Panel, you could alternatively run
 
 ```bash
 stall . -e ILSpy.exe -i ILSpy.exe --project-url=ilspy.net -p IC#Code --releases-url=github.com/icsharpcode/ILSpy/releases -v 2.3.1
 ```
+
+which turns up as
+
+![Results](http://i.imgur.com/keyKvRg.png)
 
 ## Removing Apps
 
