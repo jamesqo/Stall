@@ -1,4 +1,4 @@
-# Stall
+# Stall for Windows
 
 ![Logo](icons/icon_236_217.jpg)
 
