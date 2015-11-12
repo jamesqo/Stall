@@ -1,6 +1,6 @@
 # Stall: A Windows App Installer
 
-[![Travis CI](https://travis-ci.org/jamesqo/Stall.svg?branch=master)](https://travis-ci.org/jamesqo/Stall) [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/jamesqo/Stall?branch=master&svg=true)](https://ci.appveyor.com/project/jamesqo/Stall) [![BSD 2-Clause License](https://img.shields.io/license-bsd.svg?style=flat)](bsd.license)
+[![Travis CI](https://travis-ci.org/jamesqo/Stall.svg?branch=master)](https://travis-ci.org/jamesqo/Stall) [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/jamesqo/Stall?branch=master&svg=true)](https://ci.appveyor.com/project/jamesqo/Stall) [![BSD 2-Clause License](https://img.shields.io/license-bsd-blue.svg?style=flat)](bsd.license)
 
 Ever downloaded an EXE, but couldn't install it? **Stall** is a command-line tool that can automatically install, or remove, your favorite Windows desktop apps.
 
