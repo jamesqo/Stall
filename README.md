@@ -80,7 +80,7 @@ Usually, opening a new command prompt window should fix this.
 
 ### What if my app icon is embedded in the .exe file?
 
-Try
+Try this:
 
 ```bash
 stall -e YourApp.exe -i YourApp.exe path/to/YourApp
