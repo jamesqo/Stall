@@ -4,12 +4,6 @@
 
 Ever downloaded a program that didn't come with an installer? **Stall** is a command-line tool that can automatically install, or remove, your favorite Windows desktop apps.
 
-## Usage
-
-```bash
-stall -e YourApp.exe path/to/YourApp
-```
-
 ## Getting Started
 
 The binaries for Stall aren't available yet, so you'll have to build from source.
@@ -33,7 +27,7 @@ stall . -e stall.exe --script
 
 Congratulations! You've just installed Stall using itself.
 
-## More Usage
+## Usage
 
 The format of commands should be: `stall -e program [-i icon] [options] folder`
 
@@ -45,9 +39,9 @@ By default, the paths of `program` and `icon` are relative to the root folder. I
 
 Type `stall --help` for more usage.
 
-## Example: [ILSpy](http://ilspy.net)
+## Example
 
-ILSpy doesn't come with an installer, which was in fact the original motivation for Stall. Download and unzip the binaries; running
+**ILSpy** is one program that doesn't come with an installer (which in fact was the initial motivation for Stall). After you download and unzip the binaries from [their site](http://ilspy.net), running
 
 ```bash
 cd ~/Downloads/ILSpy
@@ -82,9 +76,11 @@ In short, Squirrel is meant to be a framework for self-updating apps. Stall can 
 
 ### I followed the steps [here](#getting-started), but Stall isn't in my `PATH`.
 
-Open a new command prompt and try again.
+Usually, opening a new command prompt window should fix this.
 
 ### What if my app icon is embedded in the .exe file?
+
+Try
 
 ```bash
 stall -e YourApp.exe -i YourApp.exe path/to/YourApp
