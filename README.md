@@ -56,7 +56,7 @@ If you want it to show up nicely in Control Panel, you could alternatively run
 stall . -e ILSpy.exe -i ILSpy.exe --project-url=ilspy.net -p IC#Code --releases-url=github.com/icsharpcode/ILSpy/releases -v 2.3.1
 ```
 
-which turns up as
+which shows up as
 
 ![Results](http://i.imgur.com/keyKvRg.png)
 
@@ -84,7 +84,7 @@ Usually, opening a new command prompt window should fix this.
 
 ### What if my app icon is embedded in the .exe file?
 
-Try this:
+Try
 
 ```bash
 stall -e YourApp.exe -i YourApp.exe path/to/YourApp
