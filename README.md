@@ -90,6 +90,10 @@ msbuild /p:Configuration=Release
 
 Once that's finished, the binaries should be in `Stall/bin/Release`. Follow the steps [mentioned above](#getting-started) and you'll have a fresh copy of Stall installed.
 
+## License
+
+Stall is distributed under the [BSD 2-clause](bsd.license) license.
+
 ## FAQ
 
 ### What's the difference between Stall and [Squirrel](https://github.com/Squirrel/Squirrel.Windows)?
@@ -109,3 +113,7 @@ Try running
 ```bash
 stall -e YourApp.exe -i YourApp.exe path/to/YourApp
 ```
+
+### Where can I contact you?
+
+You can reach me on Twitter at [@jameskodev](https://twitter.com/jameskodev), or [/u/Subtle__](https://www.reddit.com/user/Subtle__/) on Reddit.
