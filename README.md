@@ -8,21 +8,14 @@ Ever downloaded a program that didn't come with an installer? **Stall** is a com
 
 ## Getting Started
 
-The binaries for Stall aren't available yet, so you'll have to build from source.
+First, grab the latest release at https://github.com/jamesqo/Stall/releases.
 
-First clone the repo:
-
-```bash
-git clone https://github.com/jamesqo/Stall.git
-```
-
-Then open up **Stall.sln** in Visual Studio, toggle the configuration to **Release**, and build.
-
-Once that's finished, the binaries should be in `Stall/bin/Release`. Navigate there in CMD and run
+After you've downloaded the binaries, open up CMD and run
 
 ```cmd
+cd Downloads
 mkdir Stall
-robocopy . Stall stall.exe
+move stall.exe Stall
 cd Stall
 stall . -e stall.exe --script
 ```
@@ -60,6 +53,29 @@ which shows up as
 
 ![Results](http://i.imgur.com/keyKvRg.png)
 
+## Building the Repo
+
+Prerequisites:
+- Git
+- VS 2015
+
+First clone the repo:
+
+```bash
+git clone https://github.com/jamesqo/Stall.git
+```
+
+Then open up **Stall.sln** in Visual Studio, toggle the configuration to **Release**, and build.
+
+Alternatively, if you prefer a command-line interface, open up CMD and run
+
+```cmd
+cd Stall
+msbuild /p:Configuration=Release
+```
+
+Once that's finished, the binaries should be in `Stall/bin/Release`. Follow the steps [mentioned above](#getting-started) and you'll have a fresh copy of Stall installed.
+
 ## Removing Apps
 
 Have an app, or apps, installed that you'd like to remove? Running
@@ -78,13 +94,15 @@ Unfortunately, the names of the apps need to be the ones listed in the Control P
 
 In short, Squirrel is meant to be a framework for self-updating apps. Stall can install apps without having to modify the code of the app itself, but doesn't manage app updates.
 
+If your app requires a newer version of .NET to be installed (e.g. runs on .NET 4.6 but targets Windows 7), then you should probably use Squirrel as Stall doesn't offer that kind of functionality.
+
 ### I followed the steps [here](#getting-started), but Stall isn't in my `PATH`.
 
 Usually, opening a new command prompt window should fix this.
 
 ### What if my app icon is embedded in the .exe file?
 
-Try
+Try running
 
 ```bash
 stall -e YourApp.exe -i YourApp.exe path/to/YourApp
