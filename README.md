@@ -55,6 +55,18 @@ which shows up as
 
 ![Results](http://i.imgur.com/keyKvRg.png)
 
+## Removing Apps
+
+Have an app, or apps, installed that you'd like to remove? Running
+
+```bash
+stall -un names,of,the,apps
+```
+
+will uninstall them.
+
+Unfortunately, the names of the apps need to be the ones listed in the Control Panel, so this is less intuitive than it sounds.
+
 ## Building the Repo
 
 Prerequisites:
@@ -77,18 +89,6 @@ msbuild /p:Configuration=Release
 ```
 
 Once that's finished, the binaries should be in `Stall/bin/Release`. Follow the steps [mentioned above](#getting-started) and you'll have a fresh copy of Stall installed.
-
-## Removing Apps
-
-Have an app, or apps, installed that you'd like to remove? Running
-
-```bash
-stall -un names,of,the,apps
-```
-
-will uninstall them.
-
-Unfortunately, the names of the apps need to be the ones listed in the Control Panel, so this is less intuitive than it sounds.
 
 ## FAQ
 
