@@ -43,6 +43,8 @@ cd ~/Downloads/ILSpy
 stall . -e ILSpy.exe -i ILSpy.exe
 ```
 
+which should install ILSpy.
+
 If you want it to show up nicely in Control Panel, you could alternatively run
 
 ```bash
