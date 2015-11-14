@@ -110,7 +110,7 @@ Stall has:
 - **no** reboots
 - **no** UAC dialogs
 
-plus the points mentioned [with Squirrel](#).
+plus the points mentioned [with Squirrel](#whats-the-difference-between-stall-and-squirrel).
 
 ### I followed the steps [here](#getting-started), but Stall isn't in my `PATH`.
 
