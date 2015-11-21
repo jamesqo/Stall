@@ -20,6 +20,7 @@ Options:
     -c, --config=<file>      Configure options from <file> (TODO)
     -e, --executable=<file>  <file> is the app's program
     -i, --icon=<file>        <file> is the app's icon
+    --hide <csv>             Prevent <csv> from showing up in Control Panel (cannot be undone)
     -n, --name=<name>        Specify the app's name
     --overwrite              Overwrite existing folders/keys if present
     --project-url=<url>      Set <url> as the project's homepage URL
@@ -73,6 +74,19 @@ Removing apps:
     Remarks:
         - Removing any app from your computer is supported, even ones we didn't install.
 
-        - <apps> is whitespace and case insensitive; "" NOde.JS "" has the same effect as ""Node.js"".";
+        - <apps> is whitespace and case insensitive; "" NOde.JS "" has the same effect as ""Node.js"".
+
+Hiding apps:
+    stall --hide <apps>
+    Prevents <apps> from showing up in Control Panel. This CANNOT be undone.
+
+    Parameters:
+        <apps> is a CSV-style list of apps to hide.
+
+    Example:
+        stall --hide ""Microsoft Silverlight""
+
+    Remarks:
+        - Same rules from ""Removing apps"" apply: any app can be hidden, and <apps> is desensitized to whitespace + case.";
     }
 }

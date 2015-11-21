@@ -37,6 +37,13 @@ namespace Stall
                             return builder.WithStatus(Errors.CutShort);
                         programPath = array[i]; // Will be normalized + checked later
                         break;
+                    case "--hide":
+                        if (++i == array.Length)
+                                return builder.WithStatus(Errors.CutShort);
+                        builder.IntendedUsage = Usage.Hide;
+                        foreach (string app in array[i].Split(','))
+                            builder.BlackList(app.Trim());
+                        break;
                     case "-i":
                     case "--icon":
                         if (++i == array.Length)

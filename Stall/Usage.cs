@@ -9,6 +9,7 @@ namespace Stall
     public enum Usage
     {
         Install,
-        Remove
+        Remove,
+        Hide
     }
 }

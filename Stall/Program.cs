@@ -27,6 +27,8 @@ namespace Stall
                     return RemoveMain(opts);
                 case Usage.Install:
                     return InstallMain(opts);
+                case Usage.Hide:
+                    return HideMain(opts);
                 default:
                     throw new NotImplementedException("Not implemented yet.");
             }
@@ -175,6 +177,22 @@ rd /s /q ""{opts.AppName}""";
             }
 
             return 0;
+        }
+
+        static int HideMain(Options opts)
+        {
+            var appsPresent = opts.ToRemove.AsEnumerable();
+            foreach (var key in GetUninstallBaseKeys())
+            {
+                appsPresent = key.HideApps(appsPresent);
+
+                if (appsPresent.Count() == 0)
+                    return 0;
+            }
+
+            // Couldn't hide all the apps
+            string joined = string.Join(", ", appsPresent);
+            return RaiseError(Errors.RemoveFailed, $"Unable to hide these apps: {joined}");
         }
 
         static int RemoveMain(Options opts)
