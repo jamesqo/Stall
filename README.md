@@ -102,6 +102,16 @@ In short, Squirrel is meant to be a framework for self-updating apps. Stall can 
 
 If your app requires a newer version of .NET to be installed (e.g. runs on .NET 4.6 but targets Windows 7), then you should probably use Squirrel as Stall doesn't offer that kind of functionality.
 
+### How does Stall compare to Windows Installer or ClickOnce?
+
+Stall has:
+
+- **no** wizards
+- **no** reboots
+- **no** UAC dialogs
+
+plus the points mentioned [with Squirrel](#whats-the-difference-between-stall-and-squirrel).
+
 ### I followed the steps [here](#getting-started), but Stall isn't in my `PATH`.
 
 Usually, opening a new command prompt window should fix this.
