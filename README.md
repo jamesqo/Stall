@@ -67,6 +67,16 @@ will uninstall them.
 
 Unfortunately, the names of the apps need to be the ones listed in the Control Panel, so this is less intuitive than it sounds.
 
+### Hiding Apps
+
+Stall also lets you 'hide' programs by running
+
+```bash
+stall --hide app,names
+```
+
+This will prevent the apps from showing up in the Control Panel, but won't actually uninstall them. Be warned however, this **cannot** be undone.
+
 ## Building the Repo
 
 Prerequisites:
@@ -94,7 +104,7 @@ Once that's finished, the binaries should be in `Stall/bin/Release`. Follow the 
 
 Stall is distributed under the [BSD 2-clause](bsd.license) license.
 
-## FAQ
+## FAQ + Troubleshooting
 
 ### What's the difference between Stall and [Squirrel](https://github.com/Squirrel/Squirrel.Windows)?
 
@@ -123,6 +133,16 @@ Try running
 ```bash
 stall -e YourApp.exe -i YourApp.exe path/to/YourApp
 ```
+
+### How do I upgrade to a newer version of Stall?
+
+Just follow the steps in [Getting Started](#getting-started), but run this at the end:
+
+```bash
+stall . -e stall.exe -s --overwrite
+```
+
+The **--overwrite** flag tells Stall to overwrite any existing files during the installation process, if needed.
 
 ### Where can I contact you?
 
