@@ -78,14 +78,16 @@ namespace Stall.Helpers
                 string command;
                 if (!dict.TryGetValue(list[i], out command))
                     continue;
+                list.RemoveAt(i--);
+
+                var parsed = CommandInfo.Parse(command);
                 var info = new ProcessStartInfo
                 {
                     CreateNoWindow = true,
-                    FileName = command,
-                    UseShellExecute = false
+                    FileName = parsed.FileName,
+                    Arguments = parsed.Arguments
                 };
                 Process.Start(info).WaitForExit();
-                list.RemoveAt(i--);
             }
 
             return list;

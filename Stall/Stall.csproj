@@ -61,6 +61,7 @@
     <Compile Include="Cache.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Errors.cs" />
+    <Compile Include="Helpers\CommandInfo.cs" />
     <Compile Include="Helpers\DirectoryInfoExtensions.cs" />
     <Compile Include="Helpers\EnumerableExtensions.cs" />
     <Compile Include="Helpers\Equal.cs" />
