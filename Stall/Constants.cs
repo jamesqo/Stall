@@ -11,7 +11,7 @@ namespace Stall
         public const int EnglishLocale = 0x0409;
         public const string UninstallKey = @"Software\Microsoft\Windows\CurrentVersion\Uninstall";
 
-        public const string Usage = @"stall is a command-line tool to manage your Windows desktop apps.
+        public const string Usage = @"Stall is a command-line tool to manage your Windows desktop apps.
 
 Options:
     -?, -h, --help           Show help and exit
